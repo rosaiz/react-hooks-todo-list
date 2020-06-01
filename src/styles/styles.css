@@ -27,13 +27,13 @@ body {
 #root {
     align-items: center;
     width: 100%;
-    background-color: rebeccapurple
+    background-color: darkslategray
 }
 /* Todo list app styles  */
 .todo-list-app {
     padding-top: 32px;
     width: 100%;
-    max-width: 480px;
+    max-width: inherit;
 }
 /* Todo form styles */
 .todo-form input,
@@ -43,7 +43,7 @@ body {
 
 .todo-form input {
     padding: 0 14px;
-    width: 100%;
+    width: 50%;
     height: 48px;
     transition: .25s border ease-in-out;
 }
@@ -52,10 +52,30 @@ body {
         outline: 0;
         border: 1px solid #3498db;
     }
+
+/*Todo counter styles*/
+.todo-counter-all {
+    color:orangered
+}
+.todo-counter-completed {
+    color:darkslateblue
+}
+
+.counters {
+    display:inline-table;
+    color:forestgreen;
+    border-color:black;
+    padding-right: 2em;
+}
 /* Todo list styles */
 .todo-list ul {
     padding: 0;
     margin: 0;
+    width: 50%;
+}
+.completed {
+    align-items:self-end;
+    width: 40%;
 }
 
 .todo-list li {
@@ -79,7 +99,7 @@ body {
 }
 
 .todo-item input {
-    width: 100%;
+    width: 50%;
     border: 0;
     border-bottom: 1px solid transparent;
     transition: .25s border-bottom ease-in-out;
