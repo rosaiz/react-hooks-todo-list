@@ -21,7 +21,7 @@ const TodoListCompleted = (props: TodoListInterface) => {
                             handleTodoBlur={props.handleTodoBlur}
                         />
                     </li>
-                        ) : (<h1 />)
+                        ) : (<div />)
                 ))}
             </ul>
         </div>

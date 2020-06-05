@@ -11,15 +11,17 @@ const TodoList = (props: TodoListInterface) => {
         <div className="todo-list">
             <ul>
                 {props.todos.map((todo) => (
-                    <li key={todo.id}>
-                        <TodoItem
-                            todo={todo}
-                            handleTodoUpdate={props.handleTodoUpdate}
-                            handleTodoRemove={props.handleTodoRemove}
-                            handleTodoComplete={props.handleTodoComplete}
-                            handleTodoBlur={props.handleTodoBlur}
-                        />
-                    </li>
+                    todo.isCompleted ? (<div />) : (
+                        <li key={todo.id}>
+                            <TodoItem
+                                todo={todo}
+                                handleTodoUpdate={props.handleTodoUpdate}
+                                handleTodoRemove={props.handleTodoRemove}
+                                handleTodoComplete={props.handleTodoComplete}
+                                handleTodoBlur={props.handleTodoBlur}
+                            />
+                        </li>
+                        )
                 ))}
             </ul>
         </div>

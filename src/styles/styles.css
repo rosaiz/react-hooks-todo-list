@@ -18,6 +18,10 @@ body {
     margin: 0;
 }
 
+div {
+    border: 1px black;
+ }
+
 #root,
 .todo-list-app {
     display: flex;
@@ -25,9 +29,9 @@ body {
 }
 
 #root {
-    align-items: center;
+    align-items: initial;
     width: 100%;
-    background-color: darkslategray
+    background-color: darksalmon
 }
 /* Todo list app styles  */
 .todo-list-app {
@@ -40,10 +44,13 @@ body {
 .todo-item {
     border: 2px solid #ececec;
 }
+.todo-form{
+    width: 50%;
+}
 
 .todo-form input {
     padding: 0 14px;
-    width: 50%;
+    width: 100%;
     height: 48px;
     transition: .25s border ease-in-out;
 }
@@ -53,29 +60,25 @@ body {
         border: 1px solid #3498db;
     }
 
-/*Todo counter styles*/
-.todo-counter-all {
-    color:orangered
-}
-.todo-counter-completed {
-    color:darkslateblue
+/* Todo list Completed style*/
+.completed {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 50%;
+    width: 49%;
+    list-style-type: none;
 }
 
-.counters {
-    display:inline-table;
-    color:forestgreen;
-    border-color:black;
-    padding-right: 2em;
-}
+
 /* Todo list styles */
+.todo-list {
+    width: 50%;
+}
+
 .todo-list ul {
     padding: 0;
     margin: 0;
-    width: 50%;
-}
-.completed {
-    align-items:self-end;
-    width: 40%;
+    width: 100%;
 }
 
 .todo-list li {
@@ -99,7 +102,7 @@ body {
 }
 
 .todo-item input {
-    width: 50%;
+    width: 60%;
     border: 0;
     border-bottom: 1px solid transparent;
     transition: .25s border-bottom ease-in-out;
@@ -150,3 +153,29 @@ body {
     .item-remove:hover {
         color: #111;
     }
+/*Todo counter styles*/
+.counters {
+    display: inline-block;
+    color: forestgreen;
+    border-color: black;
+    padding-right: 2em;
+    width: 50%;
+    font-size: 40px;
+}
+
+.todo-counter-all {
+    color: orangered;
+    float: right;
+    width: 16%;
+}
+
+.todo-counter-completed {
+    color: darkslateblue;
+    margin-left: 42%;
+    width: 16%;
+}
+
+.todo-counter-remained {
+    float: left;
+    width: 16%;
+}

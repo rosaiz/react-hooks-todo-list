@@ -25,7 +25,7 @@ const TodoForm = (props: TodoFormInterface) => {
         let newTodo: TodoInterface
         //Check for 'Enter' key
         if (event.key === 'Enter') {
-            if (formState != "") {
+            if (formState !== "") {
                 //Prepare new todo object
                 newTodo = {
                     id: shortid.generate(),

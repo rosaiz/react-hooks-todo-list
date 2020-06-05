@@ -87,9 +87,9 @@ const TodoListApp = () => {
     return (
         <div className="todo-list-app">
             <div className="counters">
-                <h1 className="todo-counter-all"> {counter} </h1>
-                <h1 className="todo-counter-completed"> {counterCompleted} </h1>
-                <h1 className="todo-counter-remained">{counter - counterCompleted}</h1>
+                <div className="todo-counter-remained">{counter - counterCompleted}</div>
+                <div className="todo-counter-all"> {counter} </div> 
+                <div className="todo-counter-completed"> {counterCompleted} </div>
             </div>
             {/* Todo form Component */}
             <TodoForm
