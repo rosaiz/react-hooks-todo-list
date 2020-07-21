@@ -6,6 +6,6 @@
     "\\src\\components",
     "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\index.tsx",
+  "SelectedNode": "\\src\\components\\todo-item.tsx",
   "PreviewInSolutionExplorer": false
 }
